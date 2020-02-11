@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>klibraries</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>d20</name>
+	<name>klibraries</name>
 	<description>Demo project for KLIBRARIES APP</description>
 
 	<properties>
