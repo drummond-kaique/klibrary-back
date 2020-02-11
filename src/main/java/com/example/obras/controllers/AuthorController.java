@@ -51,4 +51,14 @@ public class AuthorController {
 		Author author = this.authorService.addAuthor(authorBody);
 		return ResponseEntity.ok("Author Created");
 	}
+
+	@DeleteMapping("/{id}")
+	//@PreAuthorize("hasRole('USER')")
+	public ResponseEntity<Void> delete(@PathVariable Integer id){
+		if(authorService.delete(id)) {
+			return ResponseEntity.ok().build();
+		}
+		
+		return ResponseEntity.badRequest().build();
+	}
 }

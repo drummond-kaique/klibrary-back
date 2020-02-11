@@ -41,4 +41,14 @@ public class ObraController {
 		Obra obra = this.obraService.addObra(obraBody);
 		return ResponseEntity.ok(obra);
 	}
+
+	@DeleteMapping("/{id}")
+	//@PreAuthorize("hasRole('USER')")
+	public ResponseEntity<Void> delete(@PathVariable Integer id){
+		if(obraService.delete(id)) {
+			return ResponseEntity.ok().build();
+		}
+		
+		return ResponseEntity.badRequest().build();
+	}
 }
