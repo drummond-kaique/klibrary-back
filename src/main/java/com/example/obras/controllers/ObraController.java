@@ -29,14 +29,14 @@ public class ObraController {
 	private ObraService obraService;
 	
 	@GetMapping
-	@PostAuthorize("hasRole('USER')")
+	//@PostAuthorize("hasRole('USER')")
 	public ResponseEntity<List<Obra>> getAll() {
 		List<Obra> obras = this.obraService.getAllObras();
 		return ResponseEntity.ok(obras);
 	}
 	
 	@PostMapping
-	@PreAuthorize("hasRole('USER')")
+	//@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<Obra> add(@Valid @RequestBody Obra obraBody){
 		Obra obra = this.obraService.addObra(obraBody);
 		return ResponseEntity.ok(obra);

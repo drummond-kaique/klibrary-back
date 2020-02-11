@@ -29,14 +29,14 @@ public class AuthorController {
 	private AuthorService authorService;
 	
 	@GetMapping
-	@PreAuthorize("hasRole('USER')")
+	//@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<List<Author>> getAll() {
 		List<Author> authors = this.authorService.getAllAuthors();
 		return ResponseEntity.ok(authors);
 	}
 	
 	@PostMapping
-	@PreAuthorize("hasRole('USER')")
+	//@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<String> add(@Valid @RequestBody Author authorBody){
 		if(this.authorService.existByEmail(authorBody.getEmail())) {
 			return new ResponseEntity<String>("Fail -> Email is already in use!",
