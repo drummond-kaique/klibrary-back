@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>d20</artifactId>
+	<artifactId>klibraries</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>d20</name>
-	<description>Demo project for D20 APP</description>
+	<description>Demo project for KLIBRARIES APP</description>
 
 	<properties>
 		<java.version>1.8</java.version>
